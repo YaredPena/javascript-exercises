@@ -13,10 +13,15 @@ we return the modified array
 .splice();
 */
 
-const removeFromArray = function(nums, num) {
+/// rest operator ...a. let's us take an unlimited amount of parameters.. why don't I just use this....
 
 
-};
+let removeFromArray = function(array, ...args) {
+  return array.filter(item => !args.includes(item));
+}
+
+console.log(removeFromArray([1, 2, 3, 4], 3, 2)); 
+
 
 // Do not edit below this line
 module.exports = removeFromArray;
